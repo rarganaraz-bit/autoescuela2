@@ -1,0 +1,21 @@
+estructura
+ESTRUCTURA DE DATOS Y RELACIONES
+
+1. Tabla 'clientes': Registro central de alumnos.
+   - PK: id.
+
+2. Tabla 'profesores': Base de datos del cuerpo docente.
+   - PK: id.
+
+3. Tabla 'vehiculos': Gestión de la flota de la academia.
+   - PK: id.
+   - FK: id_profesor_habitual (Vinculado a profesores.id).
+
+4. Tabla 'clases': Núcleo de la agenda y sesiones.
+   - PK: id.
+   - FK: id_cliente (Relación con clientes.id).
+   - FK: id_profesor (Relación con profesores.id).
+   - FK: id_vehiculo (Relación con vehiculos.id).
+
+Lógica del Sistema: 
+Cada registro en 'clases' representa un evento único que coordina a un alumno con un instructor y un coche en una franja horaria específica, evitando conflictos de disponibilidad.

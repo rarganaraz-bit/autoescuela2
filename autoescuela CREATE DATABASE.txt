@@ -1,0 +1,50 @@
+#autoescuela
+CREATE DATABASE IF NOT EXISTS autoescuela;
+USE autoescuela;
+
+-- Limpieza
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE clases; TRUNCATE TABLE vehiculos; TRUNCATE TABLE profesores; TRUNCATE TABLE clientes;
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- 10 PROFESORES (Nombres nuevos)
+INSERT INTO profesores (id, nombre, dni, activo) VALUES
+(1, 'Roberto Soler', '44444441A', 1), (2, 'Lucía Méndez', '44444442B', 1),
+(3, 'Fernando Cano', '44444443C', 1), (4, 'Isabel Peña', '44444444D', 1),
+(5, 'Ricardo Vega', '44444445E', 1), (6, 'Mónica Ruiz', '44444446F', 1),
+(7, 'Alberto Sanz', '44444447G', 1), (8, 'Patricia Gil', '44444448H', 1),
+(9, 'Marcos León', '44444449I', 1), (10, 'Silvia Mas', '44444440J', 1);
+
+-- 5 VEHÍCULOS (Modelos nuevos)
+INSERT INTO vehiculos (id, matricula, modelo, id_profesor_habitual, activo) VALUES
+(1, '9999-JJJ', 'Ford Focus', 1, 1), (2, '8888-KKK', 'Opel Corsa', 2, 1),
+(3, '7777-LLL', 'Citroen C3', 3, 1), (4, '6666-MMM', 'Hyundai i20', 4, 1),
+(5, '5555-NNN', 'Fiat Punto', 5, 1);
+
+-- 50 CLIENTES (Nombres totalmente distintos)
+INSERT INTO clientes (nombre, dni, telefono, activo) VALUES
+('Hugo Torres', '77000001A', '611000001', 1), ('Irene Bosch', '77000002B', '611000002', 1),
+('Marc Vidal', '77000003C', '611000003', 1), ('Julia Ortiz', '77000004D', '611000004', 1),
+('Pau Giner', '77000005E', '611000005', 1), ('Carla Reig', '77000006F', '611000006', 1),
+('Enric Pou', '77000007G', '611000007', 1), ('Laia Font', '77000008H', '611000008', 1),
+('Oriol Solà', '77000009I', '611000009', 1), ('Nora Vila', '77000010J', '611000010', 1),
+('Xavi Rius', '77000011A', '611000011', 1), ('Anna Serra', '77000012B', '611000012', 1),
+('Jordi Coll', '77000013C', '611000013', 1), ('Mireia Ros', '77000014D', '611000014', 1),
+('Quim Sala', '77000015E', '611000015', 1), ('Neus Prat', '77000016F', '611000016', 1),
+('Aleix Mas', '77000017G', '611000017', 1), ('Sílvia Pla', '77000018H', '611000018', 1),
+('Martí Bel', '77000019I', '611000019', 1), ('Emma Galí', '77000020J', '611000020', 1),
+('Víctor Jover', '77000021A', '611000021', 1), ('Aina Grau', '77000022B', '611000022', 1),
+('Raül Fuster', '77000023C', '611000023', 1), ('Clara Mir', '77000024D', '611000024', 1),
+('Dani Abad', '77000025E', '611000025', 1), ('Berta Solé', '77000026F', '611000026', 1),
+('Lluís Costa', '77000027G', '611000027', 1), ('Ester Roig', '77000028H', '611000028', 1),
+('Andreu Marí', '77000029I', '611000029', 1), ('Sònia Quer', '77000030J', '611000030', 1),
+('Gerard Tost', '77000031A', '611000031', 1), ('Olga Valls', '77000032B', '611000032', 1),
+('Bernat Suñé', '77000033C', '611000033', 1), ('Isona Maza', '77000034D', '611000034', 1),
+('Manel Vega', '77000035E', '611000035', 1), ('Núria Homs', '77000036F', '611000036', 1),
+('Francesc Pi', '77000037G', '611000037', 1), ('Gisela Tur', '77000038H', '611000038', 1),
+('Arnau Ribas', '77000039I', '611000039', 1), ('Ruth Calvet', '77000040J', '611000040', 1),
+('Pep Munné', '77000041A', '611000041', 1), ('Judit Sants', '77000042B', '611000042', 1),
+('Ivan Camps', '77000043C', '611000043', 1), ('Teresa Sol', '77000044D', '611000044', 1),
+('Mateo Ruiz', '77000045E', '611000045', 1), ('Celia Pino', '77000046F', '611000046', 1),
+('Nacho Díez', '77000047G', '611000047', 1), ('Lorena Rey', '77000048H', '611000048', 1),
+('Samuel Cid', '77000049I', '611000049', 1), ('Rebeca Paz', '77000050J', '611000050', 1);
