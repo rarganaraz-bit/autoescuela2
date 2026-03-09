@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db   = 'autoescuela';
 $user = 'root'; 
-$pass = 'root'; //
+$pass = '2007'; //
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
