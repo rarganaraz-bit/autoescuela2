@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db   = 'autoescuela';
+$db   = 'autoescuela2';
 $user = 'root'; 
 $pass = '2007'; //
 
